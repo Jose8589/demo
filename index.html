@@ -30,7 +30,9 @@
 
   <div id="lealtad" style="min-height: 100vh; max-height: 101vh; max-width:100vw; background-color: blue;">
   
-
+<button onclick="myFunction()">Try it</button>
+<br>
+<p id="demo"></p>
   </div>
   </body>
   <style>
@@ -42,7 +44,7 @@ background-position: center bottom;
 position: relative;
 }
  html { scroll-behavior: smooth;}
-@media only screen and (max-height: 1080px) {
+@media only screen and (min-width: 900px) {
 a{ font-size: 3.5vh; padding: 2vh 4vh 2vh 4vh;}
 img { width: 22vh; }
 h1{font-size: 12vh; margin: 0vh 20vh 0vh 20vh; padding: 15vh 0vh 10vh 0vh; }
@@ -51,11 +53,11 @@ button{font-size: 4vh; padding: 2vh 2.5vh 2vh 2.5vh; margin: 4vh; }
 div.claseDelDiv{background-size: auto 35rem;}
 img.telefono{position: absolute; width: auto; height: 62vh; margin: 18vh 0vw 0vh -7vw;}
 }
-@media only screen and (min-height: 750px) {
+@media only screen and (max-width: 899px) {
 a{ font-size: 2vh; padding: 2vh 3vh 1vh 1.5vh; }
 img{ width: 14vh; }
-h1{font-size: 4vh; margin: 0vh 5vh 0vh 5vh; padding: 20vh 0vh 10vh 0vh;} 
-label{font-size: 1.9vh;}
+h1{font-size: 4vh; Marvin: 0vh 5vh 0vh 5vh; padding: 20vh 0vh 10vh 0vh;} 
+label{font-size: 1.9vh; background-color: red;}
 button{font-size: 2.2vh; padding: 1.2vh 1.5vh 1.2vh 1.5vh; margin: 7vh 1vh 1vh 1vh;}
 div.claseDelDiv{background-size: auto 55vh;}
 img.telefono{position: absolute; width: auto; height: 35vh; margin: 53.5vh 0vw 0vh -15.7vw;}
@@ -174,5 +176,12 @@ $(document).ready(function(){
     }
   });
 });
+
+function myFunction() {
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+}
+
 </script>
 </html>
