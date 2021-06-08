@@ -28,7 +28,7 @@
     </ul>
   </li>
 <li><a href="https://api.whatsapp.com/send?phone=525562048936&text=¡Hola!%0A%0AMe%20gustaria%20recibir%20información." class="imgwhats"  target="_blank">
-      <i class="fa fa-whatsapp" ></i>¡Contáctanos!</a></li>
+      <i class="fa fa-whatsapp iconow" ></i>¡Contáctanos!</a></li>
       <li><a></a></li>
 </ul>
 </div>
@@ -123,22 +123,26 @@
 
 
 </div>
-<footer>
+<div class="piepagina">
 <label>FideClick</label><br><br>
-<label class="letrapie">CDMX</label><p>
-<a class="letrapie" href="tel:5591709121">Tel: 5591709121</a>
+<label class="letrapie">CDMX</label><br>
+<a class="letrapie" href="tel:5591709121">Tel: 5591709121</a><br>
+<label class="letrapie">Contactanos en:</label><br>
+<i onClick="window.open('mailto:fideclick@gmail.com')" class="fas fa-envelope fa-stack-1x contacto"></i>
 
-</footer>
+</div>
   </body>
   <style>
-  footer {
+  .piepagina {
     text-align: left;
-    padding: 10vh 2vw;
+    height: 30vh;
+    width: 100vw;
     background-color: black;
     color: white;
     font-size: 4vw; font-family: HelveticaNeue; font-weight: bold;
   }
 @media only screen and (min-width: 630px) {
+  .contacto{font-size: 2vh; border: .5px solid white; border-radius: 50px; padding: 5px 3px; overflow: auto; margin: 0% 5%;cursor: pointer;}
   .letrapie{font-size: 3vh; color: white; text-align: left;}
 .subtitulo{font-size: 2vw;}
 .subtitulo2{font-size: 1.5vw;}
@@ -172,7 +176,7 @@ form {width:25vw; height: 27vw; background-color: white; border-radius: 20px; ma
 .izquierda2{font-size: 4vw; font-family: HelveticaNeue; font-weight: bold; padding: 5vh 7vw 5vh 4vw; width: 80vw; position: absolute; left: 0; top: 25%; text-align: left;}
 .botonventas{font-size: 4vw; padding: 1vh 2vw 1vh 2vw; margin: 4vh; position: absolute; left: 10%; top: 35%; background-color: #AC46AF; font-weight: bold; }
   .imgwhats{background-color: #00BB2D; border-radius: 30px; color: white; padding: 1vh 2vh 1vh 6.5vh; margin: 5px -4vh 0vh 0vh;}
-  i{ font-size: 17px; position: absolute; color: white; margin: 0vh 0vh 0vh -35px;}
+  .iconow{ font-size: 17px; position: absolute; color: white; margin: 0vh 0vh 0vh -35px;}
   .ocultar{display: none;}
 .formlinea{white-space:pre-line;}
 a{ font-size: 4vw; padding: 2vh 3vh 1vh 1.5vh; float: left; display: block; color: #404040; text-align: center; text-decoration: none; font-family: "Helvetica Neue";}
