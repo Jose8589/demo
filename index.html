@@ -68,9 +68,9 @@
 <button class="boton-mac botonventas" onclick="window.location.href='#lealtad'">Comenzar</button>
 <span>
 <img src="img/mano2.png" class="telefono1" style="position: absolute; bottom: 0;">
-<img class="telefono2 content2" style="display: none; bottom: 0;" src="img/imagenregistro.png">
-  <img class="telefono2 content" style="display: none; bottom: 0;" src="img/imagenreferido.png">
-<img class="telefono2 content3" style="display: none; bottom: 0;" src="img/imagenlealtad.png">
+<img class="telefono2 content_1" style="display: none; bottom: 0;" src="img/imagenregistro.png">
+  <img class="telefono2 content_2" style="display: none; bottom: 0;" src="img/imagenreferido.png">
+<img class="telefono2 content_3" style="display: none; bottom: 0;" src="img/imagenlealtad.png">
 </span>
   </div>
 <div id="porque" style="min-height: 14vh; max-height: 14vh;  background-color: #46AF77;">
@@ -219,12 +219,11 @@ body { text-align: center; font-family: "Helvetica Neue"; color: #374AD8;}
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://kit.fontawesome.com/bcf28a1ba9.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
+
 setInterval(function(){
 $(document).ready(ejecuta);
 },32500);
-
 $(document).ready(ejecuta);
-
 function ejecuta() {
 
     intervalo();
@@ -300,6 +299,59 @@ function quinto() {
         function nueve() {
                 $(".content5").fadeOut(1500);
             }
+
+
+            setInterval(animar,19500);
+              function animar(){
+            $(document).ready(ejecuta1);
+            }
+            $(document).ready(ejecuta1);
+
+            function ejecuta1() {
+                intervaloa();
+                intervalob();
+                intervaloc();
+                intervalod();
+                intervaloe();
+                intervalof();
+            }
+            function intervaloa() {
+            setTimeout(cero0,500);
+            }
+            function intervalob() {
+            setTimeout(primero1,5000);
+            }
+            function intervaloc() {
+            setTimeout(segundo2,6500);
+            }
+            function intervalod() {
+            setTimeout(tercero3,11500);
+            }
+            function intervaloe() {
+             setTimeout(cuarto4,13000);
+            }
+            function intervalof() {
+            setTimeout(quinto5,18000);
+            }
+            function cero0() {
+                    $(".content_1").fadeIn(1000);
+                }
+            function primero1() {
+                    $(".content_1").fadeOut(1500);
+                }
+            function segundo2() {
+                    $(".content_2").fadeIn(1500);
+                }
+            function tercero3() {
+                    $(".content_2").fadeOut(1500);
+                }
+            function cuarto4() {
+                    $(".content_3").fadeIn(1500);
+                }
+            function quinto5() {
+                    $(".content_3").fadeOut(1500);
+                }
+
 
 
 $(document).ready(function(){
