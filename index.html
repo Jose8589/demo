@@ -28,19 +28,19 @@
           </ul>
         </li>
         <li><a href="https://api.whatsapp.com/send?phone=525562048936&text=¡Hola!%0A%0AMe%20gustaria%20recibir%20información." class="imgwhats"  target="_blank">
-        <i class="fa fa-whatsapp iconow" ></i>¡Contáctanos!</a></li>
+        <i class="fa fa-whatsapp iconow i" ></i>¡Contáctanos!</a></li>
         <li><a></a></li>
       </ul></div>
     </div>
-    <div id="home" style="min-height: 100vh; max-height: 98vh; background-color: #394FD4;">
+    <div id="home" style="min-height: 100vh; max-height: 100vh; background-color: #394FD4;">
       <br><br><br><br><br><br>
       <label class="subtitulo" style="color: white;">¿Qué estas esperando?</label><br><br><br>
       <h1 style="color: white;">Impulsa y haz crecer tu negocio con nuestras soluciones digitales</h1><br><br>
-      <label class="subtitulo2" style="color: white;">Elige la solución ideal para tu negocio</label><br><br><br>
+      <label class="subtitulo" style="color: white;">Elige la solución ideal para tu negocio</label><br><br><br>
       <button class="boton-mac" onclick="window.location.href='#minisitio'">Mini sitio web</button>
       <button class="boton-mac" onclick="window.location.href='#lealtad'">Registro de clientes</button>
     </div>
-    <div id="minisitio" style="max-height: 100vh; min-height: 99vh; background-color: #46AF77; position: relative; z-index: -1;">
+    <div id="minisitio" style="max-height: 100vh; min-height: 100vh; background-color: #46AF77; position: relative; z-index: -1;">
       <label class="izquierda" style="background-color: white; color: #394FD4;">Te creamos tu mini sitio web con los botones más usados por tus clientes en una sola página</label><br><br>
       <label class="izquierda1" style="color: white;">Conecta a tus clientes con el contenido más importante y relevante de tu negocio en un único enlace que puedes agregar directamente a tus redes sociales.</label><br><br>
       <label class="izquierda2" style="color: white;">Rápido, simple y sin complicaciones desde $99 MXN al mes.</label>
@@ -55,7 +55,7 @@
       <img class="telefono content5" style="display: none; bottom: 0;" src="img/fondodisenadora1.png">
       </span>
     </div>
-    <div id="lealtad" style="min-height: 100vh; max-height: 99vh;  background-color: white; position: relative; z-index: -1;">
+    <div id="lealtad" style="min-height: 100vh; max-height: 100vh;  background-color: white; position: relative; z-index: -1;">
         <label class="izquierda" style="background-color: #394FD4; color: white;">Registra la información de tus clientes a través de nuestra herramienta digital</label><br><br>
         <label class="izquierda1" style="color: #394FD4;">Imagina tener el WhatsApp de tus clientes, saber qué edad tienen, con que frecuencia van a tu negocio, conocer su monto promedio de consumo…. y  utilizar toda esa información para VENDER MÁS.</label><br><br>
         <label class="izquierda2" style="color: #394FD4;">Rápido, simple y sin complicaciones desde $99 MXN al mes.</label>
@@ -115,37 +115,42 @@
         </div>
         </form>
     </div>
+
     <div class="piepagina">
-      <label style="font-weight: bold; margin: 0% 2%">FideClick</label><p>
-      <label class="letrapie">México, CDMX</label><p>
-      <label style="cursor: pointer;" class="letrapie" onclick=" window.open('tel:5591709121')">Tel: 5591709121</label><p>
-      <label class="letrapie">Contactanos en:</label><p><br>
-      <span class="fa-stack" style="margin: 2%"><i onClick="window.open('mailto:fideclick@gmail.com')" class="fas fa-envelope fa-fw contacto"></i></span>
-      <span class="fa-stack"><i class="fab fa-facebook-f fa-fw contacto"></i></span>
+      <br><div style="margin: 0vh 0vw 1vh 3vw; height: auto; width: 100vw;">
+        <label class="letrapie1">FideClick</label></div>
+        <label class="letrapie">Siguenos en:</label><br>
+          <div style="margin: 0vh 0vw 1vh 3vw; height: auto; width: 100vw;">
+          <span>
+            <i class="fab fa-facebook-f redes"></i>
+            <i class="fab fa-instagram redes"></i>
+          </span></div>
+          <label class="condiciones ">Terminos y condiciones</label><br>
+          <label class="condiciones">Aviso de privacidad</label>
 
     </div>
   </body>
 <style>
-  .piepagina {
-    text-align: left;
-    height: 30vh;
-    width: 100vw;
-    background-color: black;
-    color: white;
-    font-size: 4vh; font-family: HelveticaNeue;
-      }
+
+
   @media only screen and (min-width: 630px) {
+    .redes{padding: 6px 8px; border-radius: 50px; border: 1px solid white; margin: 1.5vh .5vw 0vh .5vw; }
+    .redes:hover{background-color: #46AF77;border: 1px solid #46AF77;}
+    .piepagina { text-align: left; height: 25vh; width: 100vw; background-color: black; color: white;}
+    .letrapie1{font-size: 3vh; color: white; font-weight: bold;}
+    .letrapie{font-size: 2vh; color: white; margin: 0vh 0vw 0vh 3vw; }
+    .condiciones{font-size: 2vh; color: white; text-align: left; margin: 3vw; cursor: pointer;}
+    .condiciones:hover{color: #46AF77;}
+
     .tituloform{width: 100%; height:20%; color: white; font-size: 2vw; font-weight: bold; background-color: #394FD4; align-self: center;}
     .tituloporque{align-self: center; color: white; font-size: 3vw; font-weight: bold;}
     .contacto{border: .5px solid white; border-radius: 50px; padding: 3px 2px; cursor: pointer; }
-    .letrapie{font-size: 2vh; color: white; text-align: left; margin: 1vh 2vw;}
-    .subtitulo{font-size: 2vw;}
-    .subtitulo2{font-size: 1.5vw;}
+    .subtitulo{font-size: 1.8vw;}
     .divalto{min-height: 20vh; max-height: 20vh;}
     form {width:25vw; height: 27vw; background-color: white; margin: 7vh 3vw; overflow: hidden; display: inline-block; font-size: 1.5vw; white-space: normal; color: #404040; align-self: center;}
     .formlinea{white-space: normal; height: 80vh;}
     a{ font-size: .9em; padding: 2vh 4vh 2vh 4vh; float: left; display: block; color: #404040; text-align: center; text-decoration: none; font-family: "Helvetica Neue";}
-    i{ font-size: 19px; position: absolute; color: white; margin: 0vh 0vh 0vh -25px;}
+    .i{ font-size: 19px; position: absolute; color: white; margin: 0vh 0vh 0vh -25px;}
     .imgwhats{background-color: #00BB2D; border-radius: 30px; color: white; padding: 1.2vh 2vh 1.5vh 6.2vh; margin: 1.2vh -4vh 0vh 0vh;}
     img { width: 140px; }
     h1{font-size: 3.5vw; margin: 0vh 14vw 0vh 14vw; padding: 0vh 0vh 0vh 0vh; }
