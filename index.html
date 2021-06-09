@@ -56,6 +56,8 @@
 <img class="telefono content2" style="display: none; bottom: 0;" src="img/fondoclase.png">
   <img class="telefono content" style="display: none; bottom: 0;" src="img/fondoinmobiliaria.png">
 <img class="telefono content3" style="display: none; bottom: 0;" src="img/fondocomida.png">
+<img class="telefono content4" style="display: none; bottom: 0;" src="img/fondojoyeria.png">
+<img class="telefono content5" style="display: none; bottom: 0;" src="img/fondodisenadora.png">
 </span>
   </div>
   <div id="lealtad" style="min-height: 100vh; max-height: 99vh;  background-color: white; position: relative; z-index: -1;">
@@ -66,9 +68,9 @@
 <button class="boton-mac botonventas" onclick="window.location.href='#lealtad'">Comenzar</button>
 <span>
 <img src="img/mano2.png" class="telefono1" style="position: absolute; bottom: 0;">
-<img class="telefono content2" style="display: none; bottom: 0;" src="img/imagenregistro.png">
-  <img class="telefono content" style="display: none; bottom: 0;" src="img/imagenregistro.png">
-<img class="telefono content3" style="display: none; bottom: 0;" src="img/imagenlealtad.png">
+<img class="telefono2 content2" style="display: none; bottom: 0;" src="img/imagenregistro.png">
+  <img class="telefono2 content" style="display: none; bottom: 0;" src="img/imagenreferido.png">
+<img class="telefono2 content3" style="display: none; bottom: 0;" src="img/imagenlealtad.png">
 </span>
   </div>
 <div id="porque" style="min-height: 14vh; max-height: 14vh;  background-color: #46AF77;">
@@ -148,7 +150,6 @@
   }
 @media only screen and (min-width: 630px) {
   .contacto{border: .5px solid white; border-radius: 50px; padding: 3px 2px; cursor: pointer; }
-
   .letrapie{font-size: 2vh; color: white; text-align: left; margin: 1vh 2vw;}
 .subtitulo{font-size: 2vw;}
 .subtitulo2{font-size: 1.5vw;}
@@ -166,7 +167,9 @@ h1{font-size: 3.5vw; margin: 0vh 14vw 0vh 14vw; padding: 0vh 0vh 0vh 0vh; }
 .botonventas{font-size: 1.7vw; padding: 2.5vh 4vw 2.5vh 4vw; margin: 4vh; position: absolute; left: 80px; top: 420px; background-color: #AC46AF; font-weight: bold; }
 button{font-size: 20px; width: 300px; padding: 2.5vh 2.5vw 2.5vh 2.5vw; margin: 4vh; font-weight: bold;}
 img.telefono1{width: 40vw; height: auto; margin: 5.5vw 0vw 0vh 0vw;}
-img.telefono{position: absolute; width: 12.0vw; height: 25vw; margin: 0px 0vw 8.5vw 13.6vw;}
+img.telefono{position: absolute; width: 13.32vw; height: auto; margin: 0px 0vw 8.3vw 12.98vw; border-radius: 8px;}
+img.telefono2{position: absolute; width: 13vw; height: auto; margin: 0px 0vw 11.3vw 11.93vw; border-radius: 8px;}
+
 }
 
 
@@ -218,7 +221,7 @@ body { text-align: center; font-family: "Helvetica Neue"; color: #374AD8;}
 <script type="text/javascript">
 setInterval(function(){
 $(document).ready(ejecuta);
-},20000);
+},32500);
 
 $(document).ready(ejecuta);
 
@@ -230,8 +233,10 @@ function ejecuta() {
     intervalo3();
     intervalo4();
     intervalo5();
-
-
+    intervalo6();
+    intervalo7();
+    intervalo8();
+    intervalo9();
 }
 function intervalo() {
 setTimeout(cero,500);
@@ -243,14 +248,27 @@ function intervalo2() {
 setTimeout(segundo,6500);
 }
 function intervalo3() {
-setTimeout(tercero,12000);
+setTimeout(tercero,11500);
 }
 function intervalo4() {
- setTimeout(cuarto,13500);
+ setTimeout(cuarto,13000);
 }
 function intervalo5() {
-setTimeout(quinto,18500);
+setTimeout(quinto,18000);
 }
+function intervalo6() {
+setTimeout(seis,19500);
+}
+function intervalo7() {
+setTimeout(siete,24500);
+}
+function intervalo8() {
+setTimeout(ocho,26000);
+}
+function intervalo9() {
+setTimeout(nueve,31000);
+}
+
 function cero() {
         $(".content").fadeIn(1000);
     }
@@ -269,6 +287,19 @@ function cuarto() {
 function quinto() {
         $(".content3").fadeOut(1500);
     }
+    function seis() {
+            $(".content4").fadeIn(1500);
+        }
+    function siete() {
+            $(".content4").fadeOut(1500);
+        }
+
+        function ocho() {
+                $(".content5").fadeIn(1500);
+            }
+        function nueve() {
+                $(".content5").fadeOut(1500);
+            }
 
 
 $(document).ready(function(){
