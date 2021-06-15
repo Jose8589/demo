@@ -1,64 +1,475 @@
 <html>
   <head>
+     <base target="_top">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
     <style>
-  body { text-align: center; font-family: "Helvetica Neue"; color: #374AD8;}
-    html { scroll-behavior: smooth;}
-    .boton-mac { -webkit-appearance: none; -moz-appearance: none; appearance: none;}
-    * { margin: 0; padding: 0;}
-
-    @media only screen and (min-width: 630px) {
-    h1{font-size: 3.5vw; margin: 0vh 14vw 0vh 14vw; padding: 0vh 0vh 0vh 0vh; }
-    h3{margin: 3vh 3vw; color: #394FD4; font-size: 1.5vw; font-family: "HelveticaNeue";}
-    h4{margin: 2vh 3vw; font-size: 1vw;}
-    .form1 {width:45vw; height: 90vh; background-color: white; margin: 2vh -.5vh; overflow: hidden; display: inline-block; font-size: 1.5vw; white-space: normal; color: #404040; border: 1px solid #D0CECE;}
-    .formlinea{white-space: normal; height: 100vh;}
-
-    }
-   @media only screen and (max-width: 629px) {
-   .form1 {width:80vw; height: 40vh; background-color: white; margin: 2vh 0vw; overflow: hidden; display: inline-block; font-size: 4vw; white-space: normal; color: #404040; align-self: center;}
-.formlinea{white-space:pre-line;}
+dialog{
+  font-size: 3vw;
+  width: 50%;
+  height: 25%;
+   background-color: #374BD6;
+   margin: 12% 0% 0% 22%;
+   border: .09em solid #5E5E5E;
+   opacity:.99;
 }
-    </style>
-    <script src="https://kit.fontawesome.com/bcf28a1ba9.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5dt4pkptwN7OcAdyH_gLdascjg2e9H8&libraries=places&callback=initMap" async defer"></script>
-
+label {
+	color: #000000;
+}
+      body {
+        text-align: center;
+        font-family: 'Helvetica Neue';
+      }
+      input {
+        font-size: 3vw;
+        border: none;
+        border-bottom: .07em solid #5E5E5E;
+        margin: 10px;
+        width: 85%;
+        text-align: left;
+        font-family: 'Helvetica Neue';
+        outline: none;
+        background-color: ##374AD8;
+        color: white;
+      }
+       input:invalid {
+        border-bottom: red .1em solid;
+      }
+::-webkit-input-placeholder { color: white; }
+      form {
+        background-color: #374AD8;
+        margin: 0 auto;
+        width: 95%;
+        height: 100%;
+        border-radius: .05em;
+      }
+    input[type="button"] {
+       text-align: center;
+        background-color: white;
+        color: black;
+        width: 20%;
+      border-bottom: .03em solid white;
+        text-decoration: none;
+       margin: 0.05% 0.05%;
+        cursor: pointer;
+      }
+      input[type="button"]:disabled {
+        color: #EBEBEB;
+}
+.button1 {
+  background-color: #EBEBEB;
+  color: black;
+}
+.button1:hover {
+  background-color: #374BD6;
+  color: white;
+}
+.iconoInput {
+color: white;
+font-size: 3vw;
+position: absolute;
+margin: 3% 0%;
+padding: 0% 0%;
+}
+</style>
+<script src="https://kit.fontawesome.com/bcf28a1ba9.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
 
+function nuevoUr() {
+        document.getElementById("tres").reset();
+        document.getElementById("dos").reset();
+        document.getElementById("NuevoRegistro").style.display = "block";
+        document.getElementById("Intro").style.display = "none";
+        document.getElementById("LealtadF").style.display = "none";
+        document.getElementById("ReferidosF").style.display = "none";
+        document.getElementById("BusquedaF").style.display = "none";
+        document.getElementById("b3").style.borderBottom=".07em solid white";
+        document.getElementById("b2").style.borderBottom=".07em solid white";
+        document.getElementById("b1").style.borderBottom=".15em solid #374BD6";
+        document.getElementById("b8").style.borderBottom=".07em solid white";
+        document.getElementById("b8").style.color="#5E5E5E";
+        document.getElementById("b3").style.color="#5E5E5E";
+        document.getElementById("b2").style.color="#5E5E5E";
+        document.getElementById("b1").style.color="black";
+        document.getElementById("telefono").focus();
+
+        }
+function referidosUr() {
+        document.getElementById("tres").reset();
+        document.getElementById("uno").reset();
+        document.getElementById("ReferidosF").style.display = "block";
+        document.getElementById("Intro").style.display = "none";
+        document.getElementById("NuevoRegistro").style.display = "none";
+        document.getElementById("LealtadF").style.display = "none";
+         document.getElementById("BusquedaF").style.display = "none";
+        document.getElementById("b1").style.borderBottom=".07em solid white";
+        document.getElementById("b3").style.borderBottom=".07em solid white";
+        document.getElementById("b2").style.borderBottom=".15em solid #374BD6";
+        document.getElementById("b8").style.borderBottom=".07em solid white";
+        document.getElementById("b8").style.color="#5E5E5E";
+        document.getElementById("b3").style.color="#5E5E5E";
+        document.getElementById("b1").style.color="#5E5E5E";
+        document.getElementById("b2").style.color="black";
+        document.getElementById("telefono1").focus();
+
+}
+function lealtadUr() {
+        document.getElementById("dos").reset();
+        document.getElementById("uno").reset();
+        document.getElementById("BusquedaF").style.display = "none";
+        document.getElementById("LealtadF").style.display = "block";
+        document.getElementById("Intro").style.display = "none";
+        document.getElementById("NuevoRegistro").style.display = "none";
+        document.getElementById("ReferidosF").style.display = "none";
+       document.getElementById("b1").style.borderBottom=".07em solid white";
+        document.getElementById("b2").style.borderBottom=".07em solid white";
+        document.getElementById("b3").style.borderBottom=".15em solid #374BD6";
+        document.getElementById("b8").style.borderBottom=".07em solid white";
+        document.getElementById("b8").style.color="#5E5E5E";
+        document.getElementById("b1").style.color="#5E5E5E";
+        document.getElementById("b2").style.color="#5E5E5E";
+        document.getElementById("b3").style.color="black";
+        document.getElementById("telefono2").focus();
+}
+function abrir() {
+       var favDialog = document.getElementById('consultad')
+       favDialog.showModal();
+}
+function cerrar(){
+ var favDialog = document.getElementById('consultad');
+ document.getElementById("telefonoc").value ="";
+       favDialog.close();
+}
+function cerrar1(){
+ var favDialog = document.getElementById('cmensaje');
+       favDialog.close();
+}
+function GeneroH(){
+document.getElementById("hombre").style.backgroundColor="#364AD9";
+document.getElementById("hombre").style.color="white";
+document.getElementById("mujer").style.backgroundColor="white";
+document.getElementById("mujer").style.color="black";
+var gen = document.getElementById("genero").value="Hombre";
+}
+function GeneroM(){
+document.getElementById("mujer").style.backgroundColor="#364AD9";
+document.getElementById("mujer").style.color="white";
+document.getElementById("hombre").style.backgroundColor="white";
+document.getElementById("hombre").style.color="black";
+var gen = document.getElementById("genero").value="Mujer";
+}
+function AddRow()
+      {
+        var nombre = document.getElementById("nombre").value;
+        var instagram = document.getElementById("instagram").value;
+        var facebook = document.getElementById("facebook").value;
+
+        var apellido = document.getElementById("genero").value;
+        var fecha = document.getElementById("fecha").value;
+        var telefono = document.getElementById("telefono").value;
+        var codigopostal = document.getElementById("autocomplete").value;
+        google.script.run.NuevoC([nombre, apellido, fecha, telefono, codigopostal, instagram, facebook]);
+          document.getElementById("uno").reset();
+          document.getElementById("hombre").style.backgroundColor='';
+          document.getElementById("hombre").style.color='';
+          document.getElementById("mujer").style.backgroundColor='';
+          document.getElementById("mujer").style.color='';
+      }
+
+function AddRow2()
+      {
+        var telefono1 = document.getElementById("telefono1").value;
+        var codigoR = document.getElementById("codigoR").value;
+        var montoR = document.getElementById("montoR").value;
+        google.script.run.AReferido([telefono1, codigoR, montoR]);
+          document.getElementById("dos").reset();
+      }
+function EnviarR()
+      {
+        var elemento1 = document.getElementById("telefono1").value;
+
+        var primera1 = "https://api.whatsapp.com/send?phone=+52";
+        var segunda1 = "&text=";
+        var tercera1 = "Muchas%20gracias%20por%20tu%20compra,%20esperamos%20que%20tu%20experiencia%20en%20*TIERNITOS*%20haya%20sido%20extraordinaria%0A%0A%20¡Te%20esperamos%20pronto%20de%20regreso!"
+        var dos1 = primera1 + elemento1 + segunda1 + tercera1;
+      AddRow2();
+     window.open(dos1);
+      }
+      function AddRow3()
+      {
+        var telefono2 = document.getElementById("telefono2").value;
+        var monto = document.getElementById("monto").value;
+         var letra = "T";
+        var numcompuesto =  letra + telefono2;
+        google.script.run.ALealtad([numcompuesto, monto]);
+          document.getElementById("tres").reset();
+      }
+
+    function disableInputs() {
+      document.getElementById("b1").disabled = true;
+      document.getElementById("b2").disabled = true;
+     document.getElementById("b3").disabled = true;
+     document.getElementById("b4").disabled = true;
+     document.getElementById("b5").disabled = true;
+     document.getElementById("b6").disabled = true;
+    }
+
+    // Habilita boton y campo de texto
+    function enableInputs() {
+      document.getElementById("b1").disabled = false;
+      document.getElementById("b2").disabled = false;
+      document.getElementById("b3").disabled = false;
+      document.getElementById("b4").disabled = false;
+       document.getElementById("b5").disabled = false;
+        document.getElementById("b6").disabled = false;
+    }
 
 
-      </script>
+
+function formSubmit() {
+        var tel = document.getElementById("telefono").value;
+         var tele = document.getElementById("telefono1").value;
+          var telefonos = document.getElementById("telefono2").value;
+          var consul = document.getElementById("telefonoc").value;
+            disableInputs();
+        if (tel>999999999){
+        var letra = "T";
+        var numcompuesto =  letra + tel;
+          document.getElementById("telefonoU").value=numcompuesto;
+
+      // Llama a la funcion receiveForm de nuestro script
+      google.script.run
+        .withSuccessHandler(onSuccess1)
+        .withFailureHandler(onFailure1)
+        .receiveForm(document.forms.menu);
+}
+else if (tele>999999999){
+var letra = "T";
+        var numcompuesto =  letra + tele;
+          document.getElementById("telefonoU").value=numcompuesto;
+
+
+      // Llama a la funcion receiveForm de nuestro script
+      google.script.run
+        .withSuccessHandler(onSuccess2)
+        .withFailureHandler(onFailure2)
+        .receiveForm1(document.forms.menu);
+
+}
+else if(telefonos>999999999){
+  var letra = "T";
+        var numcompuesto =  letra + telefonos;
+          document.getElementById("telefonoU").value=numcompuesto;
+
+
+      // Llama a la funcion receiveForm de nuestro script
+      google.script.run
+        .withSuccessHandler(onSuccess3)
+        .withFailureHandler(onFailure3)
+        .receiveForm(document.forms.menu);
+}
+else if (consul>999999999){
+ var letra = "T";
+        var numcompuesto =  letra + consul;
+          document.getElementById("telefonoU").value=numcompuesto;
+         google.script.run
+        .withSuccessHandler(onSuccess5)
+        .withFailureHandler(onFailure3)
+        .receiveForm(document.forms.menu);
+}
+else {
+var favDialog = document.getElementById('cmensaje')
+       favDialog.showModal();
+ document.getElementById("cuadromensaje").innerHTML ='No se ha ingresado un número valido';
+  enableInputs();
+}
+    }
+    function onSuccess1(response) {
+      // NUEVO USUARIO
+      var user = JSON.parse(response);
+var mensaje = user.nombrec;
+var mensaje2 = "Usuario ya registrado con el nombre de ";
+var fusion = mensaje2 + mensaje;
+var favDialog = document.getElementById('cmensaje')
+       favDialog.showModal();
+ document.getElementById("cuadromensaje").innerHTML =fusion;
+ enableInputs();
+    }
+    function onFailure1() {
+        var nombre = document.getElementById("nombre").value;
+        var telefono = document.getElementById("telefono").value;
+        var arre = nombre.split('');
+        var arreglo = telefono.split('');
+        var codigo = arreglo[6] + arreglo[7] + arreglo[8] + arreglo[9] + arre[0];
+        var primera = "https://api.whatsapp.com/send?phone=+52";
+        var segunda = "&text=¡Gracias%20*";
+        var tercera = "*%20ya%20eres%20parte%20de%20nuestro%20programa%20de%20lealtad!%20%0A%0AEn%20*TIERNITOS*%20premiamos%20a%20los%20clientes%20más%20importantes.%20%0A%0AAhora%20serás%20de%20los%20primeros%20en%20recibir%20promociones%20y%20ofertas%20exclusivas%20%0A%0AAdemás%20podrás%20recibir%20beneficios%20por%20cada%20compra%20que%20realizas%20y%20por%20cada%20amigo%20que%20refieres,%20comparte%20el%20siguiente%20código%20*";
+        var cuarta = "*%20y%20ellos%20recibirán%20un%20descuento%20en%20su%20primer%20compra%0A%0ANo%20olvides%20guardar%20este%20número%20para%20estar%20en%20contacto.%0A%0A%0A%0AMenú:%20%0A%0A Instagram:%20%0A%0A Facebook:%20%0A%0A Web:%20";
+        var dos = primera + telefono + segunda + nombre + tercera + codigo + cuarta;
+
+     window.open(dos);
+     AddRow();
+ enableInputs();
+    }
+       function onSuccess2(response) {
+         // REFERIDOS
+var favDialog = document.getElementById('cmensaje')
+       favDialog.showModal();
+ document.getElementById("cuadromensaje").innerHTML ="Este número ya aplico cupon de descuento";
+ enableInputs();
+    }
+    function onFailure2() {
+formSubmit2();
+     enableInputs();
+    }
+      function onSuccess3(response) {
+   // LEALTAD
+   var user = JSON.parse(response);
+        var mensaje = user.nombrec;
+        var monto = parseInt(document.getElementById("monto").value);
+        var tiernipuntos = user.tiernipuntos;
+       var suma = tiernipuntos + monto;
+        var elemento2 = document.getElementById("telefono2").value;
+        var primera2 = "https://api.whatsapp.com/send?phone=+52";
+        var segunda2 = "&text=*TIERNITOS*%0A%0A";
+        var tercera2 = "%20gracias%20por%20tu%20preferencia.%20%0A%0ACon%20tu%20ultima%20compra%20acumulaste%20";
+        var cuarta2 = ",%20sigue%20participando%20para%20ser%20parte%20de%20los%20beneficios%20exclusivos%20que%20tenemos%20para%20ti.%20%0A%0APuedes%20calificar%20la%20atención%20que%20te%20brindamos%20en%20la%20siguiente%20liga:%20%0A%0A¡Te%20esperamos%20pronto!";
+        var dos2 = primera2 + elemento2 + segunda2 + mensaje + tercera2 + suma + cuarta2;
+      AddRow3();
+     window.open(dos2);
+ enableInputs();
+    }
+    function onFailure3() {
+ var favDialog = document.getElementById('cmensaje')
+       favDialog.showModal();
+ document.getElementById("cuadromensaje").innerHTML ="Este número aun no se ha registrado";
+  var compartirtel = document.getElementById("telefono2").value;
+  nuevoUr();
+document.getElementById("telefono").value=compartirtel;
+document.getElementById("nombre").focus();
+     enableInputs();
+    }
+  function formSubmit2() {
+        var cod = document.getElementById("codigoR").value;
+            disableInputs();
+          document.getElementById("codigoV").value=cod;
+
+      // Llama a la funcion receiveForm de nuestro script
+      google.script.run
+        .withSuccessHandler(onSuccess4)
+        .withFailureHandler(onFailure4)
+        .receiveForm3(document.forms.menu);
+}
+     function onSuccess4(response) {
+EnviarR();
+ enableInputs();
+    }
+    function onFailure4() {
+  var favDialog = document.getElementById('cmensaje')
+       favDialog.showModal();
+ document.getElementById("cuadromensaje").innerHTML ="Codigo de descuento incorrecto";
+     enableInputs();
+    }
+ function onSuccess5(response) {
+var user = JSON.parse(response);
+        var mensaje = user.nombrec;
+        var tiernipuntos = user.tiernipuntos;
+        var elemento2 = document.getElementById("telefonoc").value;
+        var primera2 = "https://api.whatsapp.com/send?phone=+52";
+        var segunda2 = "&text=Hola%20*";
+        var tercera2 = "*%0A%0ALos%20puntos%20acumulados%20hasta%20el%20día%20de%20hoy%20son%20*";
+        var cuarta2 = "*%0A%0AGracias%20por%20tu%20compra,%20nosotros%20premiamos%20tu%20lealtad,%20sigue%20acumulando%20puntos.";
+        var dos2 = primera2 + elemento2 + segunda2 + mensaje + tercera2 + tiernipuntos + cuarta2;
+      enableInputs();
+     window.open(dos2);
+     cerrar();
+    }
+
+
+function initMap() {
+   var input = document.getElementById('autocomplete');
+   const options = {
+    componentRestrictions: { country: "mx"},
+  };
+   var autocomplete = new google.maps.places.Autocomplete(input, options, {
+    fields: ["formatted_address"]
+
+  });
+  }
+
+
+
+
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5dt4pkptwN7OcAdyH_gLdascjg2e9H8&libraries=places&callback=initMap" async defer">
+</script>
   </head>
 
-  <body>
-      <div id="inicio" class="formlinea" style="word-wrap: break-word; background-color: #EBEBEB;">
-        <form class="form1">
-          <div style="width: 100%; height:20%; background-color: #394FD4; color: white; ">
-            <br>
-          <label style="color: white; font-size: 2vw; font-weight: bold;">Hecho a tu medida</label>
-          </div>
-          <br>
-          <div style="width: 80%; height:70%; margin: 0% 10% 0% 10%;">
-        <label>Antes de comprar…</label>
-        <br><br>
-        <label >te hacemos una pequeña entrevista para saber cómo funciona tu negocio y de qué manera podemos sacar su máximo potencial a través de nuestras soluciones.</label>
-        </div>
-      </form>
-      <form class="form1">
-        <div style="width: 100%; height:20%; background-color: #394FD4; color: white; ">
-        <br>
-        <label style="color: white; font-size: 2vw; font-weight: bold;">Bastante sencillo</label>
-        </div>
-        <br>
-        <div style="width: 80%; height:auto%; margin: 0% 10% 0% 10%;">
-        <label >No es nada complicado...</label>
-        </div><br>
-        <div style="width: 80%; height:60%; color: #404040; margin: 0% 10% 0% 10%; text-align: left;">
-        1. Realizamos la entrevista para conocer tu negocio.<br><br>
-        2. Diseñamos la herramienta de forma personalizada.<br><br>
-        3. Instalamos.
-        </div>
-        </form>
-    </div>
+  <body style="background-color: #374AD8;">
+      <form id="menu" style="background-color: #374AD8; border: 0;" width="94%">
+     <img src="https://firebasestorage.googleapis.com/v0/b/lealtadt-91424.appspot.com/o/fideclic.png?alt=media&token=fcdc1c2b-e520-40c9-a5bc-2bba52ee9922" width="7%"  style="vertical-align:middle; border-radius: 55%; padding: 0% 0% 0% 0%;"/>
+      <input type="button" id="b1" value="Nuevo" style="padding: 1% 0%; border-right: .03em solid #EBEBEB;" onclick="nuevoUr()"/>
+      <input type="button" id="b2" value="Referidos" style="padding: 1% 0%; border-right: .03em solid #EBEBEB;"  onclick="referidosUr()"/>
+      <input type="button" id="b3" value="Lealtad" style="padding: 1% 0%; border-right: .03em solid #EBEBEB;" onclick="lealtadUr()"/>
+      <input type="button" id="b8" value="Consulta·" style="padding: 1% 0%; " onclick="abrir()"/>
+      <input type="hidden" id="telefonoU" name="telefonoU" placeholder="Télefono" minlength="11" maxlength="11" pattern="[A-Z]{1}[0-9]{10}" style="padding: 1.5% 0% 1.5% 2%;"/>
+      <input type="hidden" id="codigoV" name="codigoV" placeholder="Codigo" minlength="5" maxlength="5" pattern="[0-9]{4}[A-Z]{1}" style="padding: 1.5% 0% 1.5% 2%;"/>
 
+ <dialog id="consultad" style="height:20%">
+ <input type="tel" id="telefonoc" placeholder="Teléfono móvil" minlength="10" maxlength="10" pattern="[0-9]{10}" style="padding: 1.5% 0% 1.5% 2%; margin: 3% 0%;"/><br>
+<input type="button" id="b4" value="Consultar" onclick="formSubmit()" style=" margin: 10% 0%; width: 35%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6;" class="button button1"/>
+<input type="button" id="b4" value="Regresar" onclick="cerrar()" style=" margin: 10% 0%; width: 35%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6;" class="button button1"/>
+ </dialog>
+<dialog id="cmensaje" style="height:20%">
+ <br><label style="margin: 10% 0% 10% 0%; color: white" id="cuadromensaje"></label><br>
+<input type="button" id="b4" value="Regresar" onclick="cerrar1()" style=" margin: 10% 0%; width: 35%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6; background-color:white; color:black;" class="button button1"/>
+ </dialog>
+
+      </form>
+<div action="#" id="Intro">
+<br><br>
+<img src="https://firebasestorage.googleapis.com/v0/b/lealtadt-91424.appspot.com/o/fideclicnombre.png?alt=media&token=6b4a9e89-2c88-4844-badc-36610af7d8d0" style="padding: 15% 0% 0% 0%; " width="65%" />
+
+</div>
+<div style="display:none" id="NuevoRegistro" >
+<form action="#" id="uno" style="background-color: #374AD8;">
+ <input type="button" id="hombre" value="Hombre" onclick="GeneroH()" style=" margin: 3% 7%; padding: 2% 0%; width: 25%; border-radius: 3em; border-bottom: .15em solid #EBEBEB" class="button button1"/>
+   <input type="button" id="mujer" value="Mujer" onclick="GeneroM()" style=" margin: 3% 7%; padding: 1% 0%; width: 25%; border-radius: 3em; border-bottom: .15em solid #EBEBEB" class="button button1"/>
+   <input type="hidden" id="genero" name="genero"/><br></br>
+    <i class="fab fa-whatsapp iconoInput"></i><input type="tel" id="telefono" placeholder="Teléfono móvil" minlength="10" maxlength="10" pattern="[0-9]{10}" style="padding: 1% 0% 1% 5%; margin: 2% 0%;"/><br>
+ <i class="fas fa-user iconoInput"></i><input type="text" id="nombre"  placeholder="Nombre (s)" style="margin: 2% 0%; padding: 1% 0% 1% 5%;"/>
+  <input type="text" class="form-control" style="margin: 3% 0%; padding: 1% 0% 1% 5%;" placeholder="Colonia" name="autocomplete" id="autocomplete"><br>
+  <label style="font-size: 3vw;">Fecha nacimiento </label><input type="date" placeholder="DD/MM/AAAA" id="fecha" style="width: 30%; margin: 3% 26% 3% 0%;"/>
+  <input type="text" id="instagram"  placeholder="Instagram" style="margin: 4% 0%; padding: 0% 0% 0% 2%;"/>
+  <input type="text" id="facebook"  placeholder="Facebook" style="margin: 4% 0%; padding: 0% 0% 0% 2%;"/>
+   <input type="button" id="b4" value="Guardar" onclick="formSubmit()" style=" margin: 4% 0%; padding: 2% 5%; width: 50%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6;" class="button button1"/>
+</form>
+
+</div>
+<div style="display:none" id="ReferidosF" >
+<form id="dos" style="background-color: #374AD8;">
+ <br><br>
+<input type="tel" id="telefono1" name="tele" placeholder="Teléfono móvil" minlength="10" maxlength="10" pattern="[0-9]{10}" style="padding: 1.5% 0% 1.5% 2%;"/><br><br>
+    <input type="text" id="codigoR" placeholder="Código Descuento" minlength="5" maxlength="5" pattern="[0-9]{4}[A-Z]{1}" style="padding: 1.5% 0% 1.5% 2%;"/><br><br>
+<input type="tel" id="montoR" placeholder="Monto de la compra" minlength="2" maxlength="4" pattern="[0-9]{4}" style="padding: 1.5% 0% 1.5% 2%;"/><br><br><br><br>
+    <input type="button" id="b5" value="Enviar" onclick="formSubmit()" style="padding: 2% 5%; width: 50%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6;" class="button button1"/>
+
+</form>
+</div>
+
+<div style="display:none" id="LealtadF" >
+<form id="tres" style="background-color: #374AD8;">
+ <br><br>
+<input type="tel" id="telefono2" name="tele" placeholder="Teléfono móvil" minlength="10" maxlength="10" pattern="[0-9]{10}" style="padding: 1.5% 0% 1.5% 2%;"/><br><br>
+    <input type="tel" id="monto" placeholder="Puntos acumulados" minlength="2" maxlength="4" pattern="[0-9]{4}" style="padding: 1.5% 0% 1.5% 2%;"/><br><br><br><br>
+    <input type="button" id="b6" value="Enviar" onclick="formSubmit()" style="padding: 2% 5%; width: 50%; border-radius: 3em; border-right: .15em solid #374BD6; border-bottom: .15em solid #374BD6;" class="button button1"/>
+
+</form>
+</div>
+<div style="display:none" id="BusquedaF" >
+
+</div>
+</div>
   </body>
 </html>
